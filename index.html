@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title></title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html, body {
+            margin: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        body {
+            min-height: 100vh;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            padding: 20px;
+
+            /* Hintergrundbild */
+            background-image:
+                linear-gradient(
+                    rgba(0, 0, 0, 0.25),
+                    rgba(0, 0, 0, 0.25)
+                ),
+                url("hintergrund.png");
+
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        video {
+            display: block;
+
+            width: min(1100px, 100%);
+            max-height: 90vh;
+
+            background: #000;
+
+            border-radius: 12px;
+
+            box-shadow:
+                0 20px 60px rgba(0, 0, 0, 0.6);
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+
+            video {
+                border-radius: 8px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <video controls playsinline preload="metadata">
+        <source src="https://pub-6ee13a32f9d2449dbb0b4cc5103f952b.r2.dev/MeinVideo.mp4" type="video/mp4">
+        Dein Browser unterstützt die Videowiedergabe nicht.
+    </video>
+
+</body>
+</html>
